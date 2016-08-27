@@ -11,7 +11,6 @@
 
 			var TAG = "Util.HuisDev";
 
-			var usb_dev = require("usb_dev");
 
 			interface IDiffInfo	{
 				diff: string[];
@@ -533,7 +532,7 @@
 			 * @return {string} vendorId, productId となるデバイするのルートパスを返す。見つからない場合は null
 			 */
 			export function	getHuisRootPath(vendorId: number, productId: number): string {
-				var	rootPath = usb_dev.getPath(vendorId, productId);
+				var	rootPath = null;
 				if (rootPath === "") {
 					return null;
 				}

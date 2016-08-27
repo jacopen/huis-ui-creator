@@ -85,11 +85,12 @@ module Garage {
 		MARGIN_MOUSEMOVALBE_BOTTOM = 80;
 
 		// Garage のファイルのルートパス設定 (%APPDATA%\Garage)
-		GARAGE_FILES_ROOT = path.join(app.getPath("appData"), "Garage").replace(/\\/g, "/");
+		GARAGE_FILES_ROOT = "/tmp/garage"
 		// HUIS File のルートパス設定 (%APPDATA%\Garage\HuisFiles)
 		HUIS_FILES_ROOT = path.join(GARAGE_FILES_ROOT, "HuisFiles").replace(/\\/g, "/");
 		if (!fs.existsSync(HUIS_FILES_ROOT)) {
-			fs.mkdirSync(HUIS_FILES_ROOT);
+      fs.mkdirSync(GARAGE_FILES_ROOT);
+      fs.mkdirSync(HUIS_FILES_ROOT);
 		}
 		// HUIS File ディレクトリーにある画像ディレクトリーのパス設定 (%APPDATA%\Garage\HuisFiles\remoteimages)
 		HUIS_REMOTEIMAGES_ROOT = path.join(HUIS_FILES_ROOT, "remoteimages").replace(/\\/g, "/");
@@ -198,7 +199,7 @@ module Garage {
 	var initCheck = (callback?: Function) => {
 		HUIS_ROOT_PATH = null;
 		while (!HUIS_ROOT_PATH) {
-			HUIS_ROOT_PATH = Util.HuisDev.getHuisRootPath(HUIS_VID, HUIS_PID);
+			HUIS_ROOT_PATH =  "/Volumes/HUIS-100RC";
             if (HUIS_ROOT_PATH) { // HUISデバイスが接続されている
                 let dirs = null;
                 while (dirs == null) {
