@@ -59,7 +59,6 @@ body {
 			display: none;	
 	}
 				
-	//ラベル、ボタン、画像などのz-indexアイテム
 	.label-item{
 		z-index:3;	
 	}
@@ -73,7 +72,6 @@ body {
 	}
 
 
-    //スクロールバー
     ::-webkit-scrollbar {
         &:horizontal{
             height: $SIZE_SCROLL_BAR_WHOLE_HEIGHT;
@@ -88,7 +86,6 @@ body {
     #face-canvas, #face-pallet, #face-list{     
         ::-webkit-scrollbar{
             &:vertical{
-                //スケールが1/2なので２倍に
                 width:$SIZE_SCROLL_BAR_VERTICL_WHOLE_WIDTH*2;
             }
         }
@@ -100,11 +97,9 @@ body {
         //overflow :overlay;
     }
 
-    //矢印ボタンを非表示に。
     ::-webkit-scrollbar-button:no-button{
     }
 
-    //スクロールバーのクリック可能エリア
     ::-webkit-scrollbar-thumb {
         &:hover{
             background-color: $COLOR_SCROLL_BAR_HOVER;
@@ -127,7 +122,6 @@ body {
         }
 
         &:vertical{
-			//スケールが1/2なので２倍に
             border-left : $SIZE_SCROLL_BAR_BORDER_VERTICAL_LEFT* 2 solid $COLOR_SCROLL_BAR_THUMB_PADDING ;
 			border-right : $SIZE_SCROLL_BAR_BORDER_HORIZONTAL_RIGHT* 2 solid $COLOR_SCROLL_BAR_THUMB_PADDING ;
 			border-bottom : $SIZE_SCROLL_BAR_BORDER_VERTICAL_BOTTOM *2 solid $COLOR_SCROLL_BAR_THUMB_PADDING;
@@ -156,7 +150,6 @@ body {
     .ui-page-theme-b{
 	
 
-        //共通の吹き出し
         #popup-arrow{
             background-position:center;
             background-repeat: no-repeat;
@@ -168,7 +161,6 @@ body {
 			margin-bottom:$SIZE_POPUP_ARROW_MINUS_MARGIN_BOTTOM;
         }
 
-        //共通のテキストボタン
           .ui-btn{
                 font-family:$FONT_FAMILY_TEXT_BUTTON;
                 text-shadow:none;
@@ -232,7 +224,6 @@ body {
                 }
             }
 
-            //共通のプルダウンメニュー
         .ui-select {
             -webkit-appearance: none;
             margin-top:$SIZE_PULL_DOWM_MARGIN_TOP;
@@ -291,7 +282,6 @@ body {
 
             }
 
-            //pull down menuの選択肢
             .ui-selectmenu{
                 margin-top:$SIZE_PULL_DOWM_MARGIN_MAIN_AND_SUB;
                 margin-bottom:$SIZE_PULL_DOWM_MARGIN_MAIN_AND_SUB;
@@ -319,7 +309,6 @@ body {
                         height:$SIZE_PULL_DOWM_HEIGHT_SUB;
 
                         .ui-btn, ui-btn-active{
-                            //縦中央揃え
                             display: flex;
                             align-items: center;
 
@@ -346,7 +335,6 @@ body {
            }
 
 
-            //オプションメニュー
             #option-pulldown-menu{
                 background-image:$PATH_IMG_OPTION_MENU_BTN_NORMAL;
                 margin-top:$SIZE_HEADER_OPTION_BTN_MARGIN_TOP;
@@ -368,7 +356,6 @@ body {
                 }
             }
                  
-            //オプションメニューのポップアップ
             .ui-popup-container{
 
                 ul{
@@ -445,7 +432,6 @@ body {
             z-index: 2;
         }
 
-        //共通のテキストフィールド
         input[type="text"]{
             font-family:$FONT_FAMILY_TEXT_BUTTON;
             height:$SIZE_FORM_HEIGHT;

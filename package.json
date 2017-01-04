@@ -1,5 +1,5 @@
 {
-  "name": "Garage",
+  "name": "garage",
   "version": "0.0.1",
   "license": "MIT",
   "keywords": [
@@ -9,6 +9,7 @@
     "jquery-mobile"
   ],
   "devDependencies": {
+    "electron-packager": "^8.4.0",
     "electron-rebuild": "^1.1.1",
     "grunt": "0.4.5",
     "grunt-cleanempty": "1.0.3",
@@ -30,7 +31,6 @@
   "main": "main.js",
   "dependencies": {
     "fs-extra": "^0.30.0",
-    "node-ini": "^1.0.0",
-    "usb_dev": "https://github.com/sony/node-win-usbdev.git"
+    "node-ini": "^1.0.0"
   }
 }
